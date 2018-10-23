@@ -13,4 +13,5 @@ export  KBUILD_OUTPUT=out
 #set defconfig
 make zte_a476_otg_defconfig 
 #start compile
-make Image.gz-dtb -j5
+make Image.gz-dtb -j5 2>&1 | tee out/build.log
+
